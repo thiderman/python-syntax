@@ -198,6 +198,13 @@ syn keyword pythonTodo		TODO FIXME XXX contained
 "
 
 syn match pythonClass       "\(import \)\@<!\<[A-Z][a-zA-Z]*\>" display
+"
+" Keyword arguments and magic arguments
+"
+
+syn match pythonArguments      "\<\zs[A-Za-z_]\+\ze\>=" display
+syn match pythonArguments      "\*\*\?[A-Za-z_]\+\>" display contains=pythonMagicArguments
+syn match pythonMagicArguments "\zs\*\*\?\ze" display contained
 
 "
 " Errors
@@ -493,6 +500,8 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonException        Exception
   HiLink pythonOperator         Operator
   HiLink pythonClass            Type
+  HiLink pythonArguments        Identifier
+  HiLink pythonMagicArguments   Special
 
   HiLink pythonDecorator        Define
   HiLink pythonDottedName       Function
