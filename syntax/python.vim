@@ -472,6 +472,11 @@ if s:Enabled("g:python_highlight_exceptions")
   syn keyword pythonExClass	PendingDepricationWarning SyntaxWarning
   syn keyword pythonExClass	RuntimeWarning FutureWarning
   syn keyword pythonExClass	ImportWarning UnicodeWarning
+
+  " Highlight via regexp. This will catch user defined exceptions as well as
+  " new exception classes that might be added in the future. The above list of
+  " keyword definitions are kept so that users can still use syntax completion.
+  syn match pythonExClass	'\<[A-Z]\w*\(Error\|Exception\|Warning\)\>'
 endif
 
 if s:Enabled("g:python_slow_sync")
