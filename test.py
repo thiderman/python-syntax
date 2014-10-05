@@ -47,6 +47,10 @@ UnicodeTranslateError ValueError WindowsError ZeroDivisionError
 Warning UserWarning DeprecationWarning PendingDepricationWarning SyntaxWarning
 RuntimeWarning FutureWarning ImportWarning UnicodeWarning
 
+# Classes
+
+ClassName modulename.ClassName
+
 # Constant variables
 
 CONSTANT_VARIABLE modulename.ANOTHER_CONSTANT
