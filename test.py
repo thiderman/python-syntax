@@ -47,6 +47,10 @@ UnicodeTranslateError ValueError WindowsError ZeroDivisionError
 Warning UserWarning DeprecationWarning PendingDepricationWarning SyntaxWarning
 RuntimeWarning FutureWarning ImportWarning UnicodeWarning
 
+# Constant variables
+
+CONSTANT_VARIABLE modulename.ANOTHER_CONSTANT
+
 # Decorators.
 
 @ decoratorname
@@ -128,9 +132,9 @@ $ ? 6xav
 
 # Trailing space errors.
 
-    	
-    break	    
-"""  	
-   	 
-    test    	
-"""  	
+
+    break
+"""
+
+    test
+"""

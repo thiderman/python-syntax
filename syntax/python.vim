@@ -227,6 +227,12 @@ if s:Enabled("g:python_highlight_space_errors")
 endif
 
 "
+" Constant variables
+"
+
+syn match pythonConstant   "\(import \)\@<!\<[A-Z_]\+\>" display
+
+"
 " Strings
 "
 
@@ -507,6 +513,7 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonClass            Type
   HiLink pythonArguments        Identifier
   HiLink pythonMagicArguments   Special
+  HiLink pythonConstant         Constant
 
   HiLink pythonDecorator        Define
   HiLink pythonDottedName       Function
