@@ -476,7 +476,7 @@ if s:Enabled("g:python_highlight_exceptions")
   " Highlight via regexp. This will catch user defined exceptions as well as
   " new exception classes that might be added in the future. The above list of
   " keyword definitions are kept so that users can still use syntax completion.
-  syn match pythonExClass	'\<[A-Z]\w*\(Error\|Exception\|Warning\)\>'
+  syn match pythonExClass	'\(import \)\@<!\<[A-Z]\w*\(Error\|Exception\|Warning\)\>'
 endif
 
 if s:Enabled("g:python_slow_sync")
